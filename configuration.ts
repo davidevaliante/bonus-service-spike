@@ -11,7 +11,7 @@ export interface Config {
 
 export const configuration : Config = {
     streamerId : 6,
-    streamerName : 'SPIKE YT',
+    streamerName : 'SPIKEYT',
     api : 'https://compare.topadsservices.com',
     primaryColor : '#db0d30',
     secondaryColor : '#db0d30',
