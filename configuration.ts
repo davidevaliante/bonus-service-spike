@@ -17,5 +17,6 @@ export const configuration : Config = {
     secondaryColor : '#db0d30',
     fontString : "https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap",
     font : 'Roboto',
+    youtubeMetatag : 'M8eO4mYEdHHtKpSYgGOeXo-E-kFAfOmFMUwmaii2bkM'
 }
 
