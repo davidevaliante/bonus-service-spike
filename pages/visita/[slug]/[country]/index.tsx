@@ -80,13 +80,13 @@ export async function getServerSideProps({ query, res }) {
         variables : {
             compareCode : slug,
             id : configuration.streamerId,
-            label : `${slug} ${configuration.streamerName} it`
+            label : `${slug} ${configuration.streamerName} ${country}`
         }
     })
 
-    const link = links.data.data.streamer.bonuses[0].links.find(b => b.label === `${slug} ${configuration.streamerName} ${country}`)
-
-    
+    let link = links.data.data.streamer.bonuses[0].links.find(b => b.label === `${slug} ${configuration.streamerName} ${country}`)
+    if(link == undefined) link = links.data.data.streamer.bonuses[0].links.find(b => b.label === `${slug} ${configuration.streamerName} row`)
+   
     
     return {
         props: {
