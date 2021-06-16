@@ -21,8 +21,6 @@ interface Props {
 
 const BonusStripe: FunctionComponent<Props> = ({ bonus, eng = false, countryCode }) => {
 
-    console.log(bonus)
-
     const { currentCountry } = useContext(countryContext)
 
     const visit = () => {
@@ -69,6 +67,85 @@ const BonusStripe: FunctionComponent<Props> = ({ bonus, eng = false, countryCode
         }
     }
 
+    const visitGuide = () => {
+        switch(bonus.name){
+            case 'StarCasino': 
+                window.open('https://www.spikeslot.com/guida/bonus-benvenuto-starcasino/it')
+                break
+
+            case 'Unibet Casino': 
+                window.open('https://www.spikeslot.com/guida/guida-bonus-unibet-casino/it')
+                break
+        
+            case 'Eurobet Casino': 
+                window.open('https://www.spikeslot.com/guida/guida-bonus-benvenuto-eurobet/it')
+                break
+
+            case 'Betway': 
+                window.open('https://www.spikeslot.com/guida/bonus-benvenuto-casino-betway/it')
+                break
+
+            
+            case 'Casino.com Casino': 
+                window.open('https://www.spikeslot.com/guida/bonus-benvenuto-casino-com/it')
+                break
+
+            case 'LeoVegas Casino': 
+                window.open('https://www.spikeslot.com/guida/bonus-benvenuto-casino-leovegas/it')
+                break
+
+            case '888 Casino': 
+                window.open('https://www.spikeslot.com/guida/bonus-benvenuto-888-casino/it')
+                break
+
+            case 'Lottomatica': 
+                window.open('https://www.spikeslot.com/guida/bonus-benvenuto-lottomatica-casino/it')
+                break
+
+            case 'GoldBet': 
+                window.open('https://www.spikeslot.com/guida/guida-bonus-goldbet/it')
+                break
+
+            case 'NetBet': 
+                window.open('https://www.spikeslot.com/guida/netbet-casino-bonus-benvenuto/it')
+                break
+
+            case 'Starvegas Casino': 
+                window.open('https://www.spikeslot.com/guida/bonus-benvenuto-casino-starvegas/it')
+                break
+
+            case 'Gioco Digitale Casino': 
+                window.open('https://www.spikeslot.com/guida/bonus-benvenuto-casino-gioco-digitale/it')
+                break
+
+
+            case 'BetFlag': 
+                window.open('https://www.spikeslot.com/guida/casino-betflag-bonus-benvenuto/it')
+                break
+
+            case 'Bwin': 
+                window.open('https://www.spikeslot.com/guida/bonus-benvenuto-casino-bwin/it')
+                break
+
+            case 'PokerStars Casino': 
+                window.open('https://www.spikeslot.com/guida/guida-al-bonus-di-benvenuto-pokerstars/it')
+                break
+
+            case 'Snai Casino': 
+                window.open('https://www.spikeslot.com/guida/bonus-benvenuto-casino-snai/it')
+                break
+
+            case 'AdmiralYES':
+                window.open('https://www.spikeslot.com/guida/bonus-benvenuto-casino-slotyes/it')
+                break
+
+
+            default:
+                window.open('https://www.spikeslot.com/guida/bonus-benvenuto-starcasino/it')
+
+        }
+    }
+
     return (
         <Container>
             <Row onClick={() => visit()}>
@@ -99,7 +176,7 @@ const BonusStripe: FunctionComponent<Props> = ({ bonus, eng = false, countryCode
                 </div>
             </RowDeposit>
 
-            <Row style={{ marginTop: '.5rem' }}>
+            <Row style={{ marginTop: '.5rem', justifyContent : 'space-around' }}>
                 {/* {bonus.bonus_guide && !eng && <GuideButton onClick={() => window.open(`https://www.spikeslot.com/guida/${bonus.bonus_guide!.slug}/${countryCode ? countryCode : currentCountry}`)}>
                     {!eng ? 'READ THE GUIDE' : 'READ THE GUIDE'}
                 </GuideButton>} */}
@@ -107,10 +184,16 @@ const BonusStripe: FunctionComponent<Props> = ({ bonus, eng = false, countryCode
                 <WebSiteButton onClick={() => visit()}>
                     {'Visita il sito'}
                 </WebSiteButton>
+
+                <GuideButton onClick={() => visitGuide()}>
+                    {'Leggi la Guida'}
+                </GuideButton>
             </Row>
         </Container>
     )
 }
+
+
 
 const GuideButton = styled.div`
     cursor : pointer;
@@ -121,7 +204,10 @@ const GuideButton = styled.div`
     font-weight : bold;
     color : ${(props) => props.theme.colors.primary};
     border-radius : 4px;
-    max-width : 145px;
+    width : 120px;
+    height : 52px;
+    box-sizing : border-box;
+
 `
 
 const WebSiteButton = styled.div`
@@ -134,6 +220,9 @@ const WebSiteButton = styled.div`
     color : white;
     font-weight : bold;
     border-radius : 4px;
+    height : 52px;
+    width : 120px;
+    box-sizing : border-box;
 `
 
 const StarContainer = styled.div`

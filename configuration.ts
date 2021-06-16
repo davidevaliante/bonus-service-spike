@@ -19,6 +19,6 @@ export const configuration : Config = {
     fontString : "https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap",
     font : 'Roboto',
     youtubeMetatag : 'M8eO4mYEdHHtKpSYgGOeXo-E-kFAfOmFMUwmaii2bkM',
-    geoApi : 'https://api.ipgeolocation.io/ipgeo'
+    geoApi : 'https://api.ipgeolocation.io/ipgeo?apiKey=d9c8ca199b3f40fabc69dfdfefdc9aa2'
 }
 
