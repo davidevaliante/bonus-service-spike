@@ -139,6 +139,10 @@ const BonusStripe: FunctionComponent<Props> = ({ bonus, eng = false, countryCode
                 window.open('https://www.spikeslot.com/guida/bonus-benvenuto-casino-slotyes/it')
                 break
 
+            case 'WinCasino':
+                window.open('https://spikeslot.com/guida/recensione-wincasino-bonus/it')
+                break
+
 
             default:
                 window.open('https://www.spikeslot.com/guida/bonus-benvenuto-starcasino/it')

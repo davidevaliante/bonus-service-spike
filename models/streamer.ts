@@ -5,7 +5,8 @@ export class Streamer {
         public bonuses : StreamerBonus[],
         public countryBonusList : {
             label : string,
-            bonuses : StreamerBonus[]
+            bonuses : StreamerBonus[],
+            
         }[]
     ){}
 }
