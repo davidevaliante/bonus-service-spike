@@ -53,17 +53,21 @@ const Compare: FunctionComponent<Props> = ({ streamerData, bonusToShow }) => {
 
     const remappedBonusToShow = [...bonusToShow];
 
-    // // betflag == 47 admiral == 33 win 55
+    // betflag == 47 admiral == 33 win 55
 
-    // if (remappedBonusToShow.includes(47)) {
-    //   const indexToRemove = remappedBonusToShow.indexOf(47);
+    // /b/55-18-1-17-47
 
-    //   if (!remappedBonusToShow.includes(55)) {
-    //     remappedBonusToShow.splice(indexToRemove, 1, 55);
-    //   } else {
-    //     remappedBonusToShow.splice(indexToRemove, 1, 33);
-    //   }
-    // }
+    // /b/47-18-1-17-38
+
+    if (remappedBonusToShow.includes(47)) {
+      const indexToRemove = remappedBonusToShow.indexOf(47);
+
+      if (!remappedBonusToShow.includes(55)) {
+        remappedBonusToShow.splice(indexToRemove, 1, 55);
+      } else {
+        remappedBonusToShow.splice(indexToRemove, 1, 33);
+      }
+    }
 
     remappedBonusToShow.forEach((bonusCode) => {
       const b = streamerBonuses.find((b) => b.id === bonusCode);
