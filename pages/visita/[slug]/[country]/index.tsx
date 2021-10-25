@@ -128,6 +128,16 @@ export async function getServerSideProps({ query, res }) {
     if (link.label.includes("goldbt"))
       link.link =
         "https://media.goldbetpartners.it/redirect.aspx?pid=5397&bid=1495";
+    if (link.label.includes("unibt"))
+      link.link =
+        "https://b1.trickyrock.com/redirect.aspx?pid=79237117&bid=27508";
+    if (link.label.includes("admiral"))
+      link.link =
+        "http://wladmiralinteractive.adsrv.eacdn.com/wl/clk/?btag=a_2785b_177&aid=";
+
+    if (link.label.includes("btway"))
+      link.link =
+        "https://betway.it/bwp/welcome-5gratis/it-it/?s=bw210475&a=AFF3413145431712861&utm[…]rce=210475&utm_medium=Affiliate&utm_campaign=AFF3413145431712861";
   }
 
   return {
