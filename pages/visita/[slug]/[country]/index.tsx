@@ -66,6 +66,7 @@ export async function getServerSideProps({ query, res }) {
   const slug = query.slug as string;
   const country = query.country as string;
   const fromInstagram = query.instagram as string;
+  const fromTwitch = query.twitch as string;
 
   let redirect;
 
@@ -138,6 +139,59 @@ export async function getServerSideProps({ query, res }) {
     if (link.label.includes("btway"))
       link.link =
         "https://betway.it/bwp/welcome-5gratis/it-it/?s=bw210475&a=AFF3413145431712861&utm[…]rce=210475&utm_medium=Affiliate&utm_campaign=AFF3413145431712861";
+  }
+
+  //casino.com betflag goldbet unibet
+
+  if (fromTwitch === "true") {
+    if (link.label.includes("wincsn"))
+      link.link =
+        "https://www.wincasinopromo.it/?=mpda4cb107-b6aa-4226-b1e8-23aa29b99a43";
+    if (link.label.includes("starcsn"))
+      link.link =
+        "http://record.affiliatelounge.com/_SEA3QA6bJTMP_fzV1idzxmNd7ZgqdRLk/146/";
+    if (link.label.includes("starvgs"))
+      link.link = "https://www.starvegas.it/gmg/refer/61e9486fd9610f0001915dfe";
+    if (link.label.includes("eurobt"))
+      link.link =
+        "https://record.betpartners.it/_E_C7XwxgprAZV93hC2dJ_GNd7ZgqdRLk/122/";
+    if (link.label.includes("888"))
+      link.link = "https://mmwebhandler.aff-online.com/C/43430?sr=1858571";
+    if (link.label.includes("leovgs"))
+      link.link =
+        "https://ads.leovegas.com/redirect.aspx?pid=3732732&bid=14965";
+    if (link.label.includes("snai"))
+      link.link =
+        "https://affiliazioniads.snai.it/redirect.aspx?pid=30686&bid=2479";
+    // if (link.label.includes("btflg"))
+    //   link.link = "https://adv.betflag.com/redirect.aspx?pid=5367&bid=2680";
+
+    if (link.label.includes("pkrstr"))
+      link.link =
+        "https://secure.starsaffiliateclub.com/C.ashx?btag=a_184418b_5683c_&affid=100976968&siteid=184418&adid=5683&c=";
+    if (link.label.includes("gd"))
+      link.link =
+        "https://mediaserver.entainpartners.com/renderBanner.do?zoneId=2043023";
+    if (link.label.includes("bwin"))
+      link.link =
+        "https://mediaserver.entainpartners.com/renderBanner.do?zoneId=2043024";
+    // if (link.label.includes("goldbt"))
+    //   link.link =
+    //     "https://media.goldbetpartners.it/redirect.aspx?pid=5397&bid=1495";
+    // if (link.label.includes("unibt"))
+    //   link.link =
+    //     "https://b1.trickyrock.com/redirect.aspx?pid=79237117&bid=27508";
+    if (link.label.includes("admiral"))
+      link.link =
+        "http://wladmiralinteractive.adsrv.eacdn.com/C.ashx?btag=a_2853b_507c_&affid=827&siteid=2853&adid=507&c=";
+
+    if (link.label.includes("btway"))
+      link.link =
+        "https://www.betway.it/?s=bw210475&a=AFF3488313269584309&mid=15287&utm_source=210475&utm_medium=Affiliate&utm_campaign=AFF3488313269584309";
+
+    if (link.label.includes("btway"))
+      link.link =
+        "https://campaigns.williamhill.it/C.ashx?btag=a_197410b_834c_&affid=1740696&siteid=197410&adid=834&c=";
   }
 
   return {

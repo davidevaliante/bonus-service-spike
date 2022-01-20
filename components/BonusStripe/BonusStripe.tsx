@@ -18,6 +18,7 @@ interface Props {
   eng?: boolean;
   countryCode: string;
   fromInstagram?: boolean;
+  fromTwitch?: boolean;
 }
 
 const BonusStripe: FunctionComponent<Props> = ({
@@ -25,6 +26,7 @@ const BonusStripe: FunctionComponent<Props> = ({
   eng = false,
   countryCode,
   fromInstagram,
+  fromTwitch,
 }) => {
   const { currentCountry } = useContext(countryContext);
 
@@ -38,6 +40,8 @@ const BonusStripe: FunctionComponent<Props> = ({
 
     if (fromInstagram)
       Router.push(`/visita/${bonus.compareCode}/${countryCode}?instagram=true`);
+    else if (fromTwitch)
+      Router.push(`/visita/${bonus.compareCode}/${countryCode}?twitch=true`);
     else Router.push(`/visita/${bonus.compareCode}/${countryCode}`);
   };
 
