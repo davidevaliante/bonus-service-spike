@@ -309,7 +309,8 @@ const Row = styled.div`
   align-items: center;
   flex-grow: 1;
   margin-bottom: 1rem;
-  width: 280px;
+  min-width: 280px;
+  max-width: 280px;
 
   ${desktop} {
     margin-bottom: 0rem;
@@ -344,6 +345,7 @@ const RowDeposit = styled.div`
 
   .deposit-container {
     width: 45%;
+    max-width: 225px;
   }
 
   h3 {
@@ -362,7 +364,7 @@ const RowDeposit = styled.div`
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-betw;
   flex-wrap: wrap;
   border: 1px solid ${(props) => props.theme.colors.primary};
   padding: 1rem;
