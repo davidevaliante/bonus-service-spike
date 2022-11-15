@@ -145,7 +145,12 @@ export async function getServerSideProps({ query, res }) {
 			link.link =
 				'https://betway.it/bwp/welcome-5gratis/it-it/?s=bw210475&a=AFF3413145431712861&utm[…]rce=210475&utm_medium=Affiliate&utm_campaign=AFF3413145431712861'
 	}
+		if (link.label.includes('bstngm'))
+			link.link =
+				'https://informatoriads.snai.it/redirect.aspx?pid=32127&bid=2742'
+	}
 
+	//casino.com betflag goldbet unibet
 	//casino.com betflag goldbet unibet
 
 	if (fromTwitch === 'true') {
