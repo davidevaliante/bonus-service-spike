@@ -89,7 +89,51 @@ const Compare: FunctionComponent<Props> = ({ streamerData, bonusToShow }) => {
 					<img className='logo' src='/icons/app_icon.png' />
 				</div>
 
-				<h1>Comparazione offerte di siti legali in Italia:</h1>
+				{country === 'it' && (
+					<div
+						style={{
+							backgroundColor: '#f5f5f5',
+							paddingRight: '30px',
+							paddingLeft: '30px',
+							paddingTop: '10px',
+							textAlign: 'center',
+							fontSize: '11px',
+							color: '#666',
+						}}
+					>
+						Queste sono informazioni atte a riconoscere e comparare
+						siti di gioco legale nel tuo paese. Ricordati che al
+						gioco alla lunga si perde, perchè i giochi con vincite
+						sono concepiti per restituire alla lunga una percentuale
+						inferiore a quella giocata, quindi se nella singola
+						partita può capitare di vincere, alla lunga è
+						praticamente impossibile. Se decidi di procedere, sappi
+						che stai rischiando di perdere i tuoi soldi.
+					</div>
+				)}
+
+				<div
+					style={{
+						position: 'fixed',
+						bottom: '0',
+						left: '0',
+						backgroundColor: 'red',
+						width: '100%',
+						padding: '10px 0px',
+						zIndex: 100,
+					}}
+				>
+					<div
+						style={{
+							color: 'white',
+							fontWeight: 'bold',
+							fontSize: '.8rem',
+							textAlign: 'center',
+						}}
+					>
+						<div>Comparazione offerte di siti legali in Italia</div>
+					</div>
+				</div>
 
 				{bonuses &&
 					bonuses.length > 2 &&
