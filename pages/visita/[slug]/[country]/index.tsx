@@ -114,7 +114,7 @@ export async function getServerSideProps({ query, res }) {
 			link.link = 'https://ic.aff-handler.com/c/43431?sr=1862015'
 		if (link.label.includes('leovgs'))
 			link.link =
-				'https://ads.leovegas.com/redirect.aspx?pid=3710704&bid=14965'
+				'https://ntrfr.leovegas.com/redirect.aspx?pid=3710704&lpid=1757&bid=19140'
 		if (link.label.includes('snai'))
 			link.link =
 				'https://informatoriads.snai.it/redirect.aspx?pid=30224&bid=2479'
@@ -166,7 +166,7 @@ export async function getServerSideProps({ query, res }) {
 			link.link = 'https://mmwebhandler.aff-online.com/C/43430?sr=1858571'
 		if (link.label.includes('leovgs'))
 			link.link =
-				'https://ads.leovegas.com/redirect.aspx?pid=3732732&bid=14965'
+				'https://ntrfr.leovegas.com/redirect.aspx?pid=3732732&lpid=1757&bid=19140'
 		if (link.label.includes('snai'))
 			link.link =
 				'https://informatoriads.snai.it/redirect.aspx?pid=30686&bid=2479'
