@@ -46,9 +46,9 @@ const BonusStripe: FunctionComponent<Props> = ({
   };
 
   const extractNoDepositText = () => {
-    if (bonus.compareCode === "starcsn") {
-      return `100 Giri Gratis alla Slot "Tnt Tumble"`;
-    }
+    // if (bonus.compareCode === "starcsn") {
+    //   return `100 Giri Gratis alla Slot "Tnt Tumble"`;
+    // }
 
     const texts = bonus.noDepositDescription;
     const matchingText = texts.find((it) => it.label === countryCode);

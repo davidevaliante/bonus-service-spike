@@ -40,15 +40,17 @@ const index: FunctionComponent<Props> = ({ redirect }) => {
 
   const getRedirect = () => {
     // TODO: only delete this line
-    try {
-      if (router.asPath.split("/")[2] == "starcsn") {
-        return "https://record.starcasino.it/_ZJk7zmO4vM8zquttgTaVXmNd7ZgqdRLk/2/";
-      }
+    // try {
+    //   if (router.asPath.split("/")[2] == "starcsn") {
+    //     return "https://record.starcasino.it/_ZJk7zmO4vM8zquttgTaVXmNd7ZgqdRLk/2/";
+    //   }
+    //
+    //   return redirect;
+    // } catch {
+    //   return redirect;
+    // }
 
-      return redirect;
-    } catch {
-      return redirect;
-    }
+    return redirect;
   };
 
   return (
